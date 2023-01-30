@@ -35,13 +35,44 @@ $( document ).ready(function() {
    }
    count=0;
    console.log(count);
- });
+
+   $.ajax({
+
+    type: 'GET',
+
+    url: 'https://dad-jokes.p.rapidapi.com/random/joke',
+
+    dataType: 'json',
+
+    headers: {
+
+                       'content-type': "application/json",
+
+                       'X-RapidAPI-Key': '69f5629098msh2937e5cf4b4a80ep1f6681jsn8d964b518220',
+
+                       'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+
+                    },
+
+    success: function (data)
+
+    {
+      $('#joke1').html(i+". "+data.body[0].setup);
+
+      console.log(data.body[0].setup);
+
+      $('#joke2').html(data.body[0].punchline);
+
+      console.log(data.body[0].punchline);
+      i++;
+    }
+    });
+  });
 
   $('#btn').click(function(){
     debugger;
     count=count+1;
-
-     if(count>=userinput){
+     if(count=userinput){
 
       $('#btn').prop('disabled', true);
 
@@ -81,8 +112,6 @@ $( document ).ready(function() {
     i++;
     }
 
-  });
-
+  }); 
 });
-
 });
