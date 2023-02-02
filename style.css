@@ -24,26 +24,23 @@ body {
     font-weight: bold;
 }
 
-.box {
+.favourite-place-card-container {
 
-    background-color:rgb(230, 243, 184);
+    background-color: rgb(240, 245, 157);
 
     border-radius: 18px;
 
-    box-shadow: rgba(236, 116, 11, 0.2) 0px 7px 29px 0px;
+    padding: 14px;
+
+    margin: 15px;
 
     text-align: center;
 
-    width: 650px;
-
-    height: cover;
-
-    padding: 14px;
-
-    border:3px solid rgb(1, 9, 11);
+    background-size: cover;
 
     font-weight: bold;
-}
+
+  }
 
 h3 {
     Color:rgb(7, 64, 9);
