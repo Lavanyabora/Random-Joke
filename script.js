@@ -7,10 +7,11 @@ $(document).ready(function () {
 
     console.log("beforeinput" + count);
 
-    if (count == userinput) {
+    if (count == userinput)
+    {
 
       $('#btn').prop('disabled', true);
-            
+           
       document.getElementById('btn').style.visibility = 'hidden';
     }
 
@@ -52,7 +53,6 @@ $(document).ready(function () {
     });
   }
 
-
   console.log("firstcountvalue" + count)
   document.querySelector('#btn').style.display = 'none';
 
@@ -69,11 +69,18 @@ $(document).ready(function () {
     userinput = $('#txtcount').val();
     temp.innerHTML = "<h4 style='dispaly:flex;margin-right: 30px;'>" + 'Your Joke Count : ' + userinput + "</h4>"
     if (userinput > 0) {
+      console.log(userinput);
+      getJoke();
       document.getElementById('btncount').style.display = "none";
       document.getElementById('txtcount').style.display = "none";
     }
+    else{
+       alert("enter value");
+       document.getElementById('btn').style.display = "none";
+       document.getElementById('clr').style.display = "none";
+    }
     console.log(count);
-    getJoke();
+   
   });
 
   $('#btn').click(function () {
@@ -81,3 +88,4 @@ $(document).ready(function () {
     getJoke();
   });
 });
+
