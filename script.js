@@ -67,15 +67,16 @@ $(document).ready(function () {
   }
   $('#btncount').click(function () {
     userinput = $('#txtcount').val();
-    temp.innerHTML = "<h4 style='dispaly:flex;margin-right: 30px;'>" + 'Your Joke Count : ' + userinput + "</h4>"
     if (userinput > 0) {
+      alert("Count Successfully Submitted");
+      temp.innerHTML = "<h4 style='dispaly:flex;margin-right: 30px;'>" + 'Your Joke Count : ' + userinput + "</h4>"
       console.log(userinput);
       getJoke();
       document.getElementById('btncount').style.display = "none";
       document.getElementById('txtcount').style.display = "none";
     }
     else{
-       alert("enter value");
+       alert("Please Enter value");
        document.getElementById('btn').style.display = "none";
        document.getElementById('clr').style.display = "none";
     }
