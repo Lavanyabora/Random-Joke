@@ -12,10 +12,11 @@
 
 <body>
     <div class="container">
-        <div class="favourite-place-card-container d-flex flex-row">
+        <div class="box">
             <div id="limit" class="limit" document.getElementById(count) ></div>
-            <h3>😂Best Jokes to make your day😂</h3>
-            <div align="center" id="joke1" class="joke1" ></div>
+            <h3>😂Try Not To Laugh Challenge😂</h3>
+            <br>
+            <div align="center" id="joke1" class="joke1" >Loading funny jokes...</div>
             <br>
             <br>
             <div align="center" id="joke2" class="joke2"></div> 
@@ -23,15 +24,10 @@
         <div class="row mt-1">
             <div class="col-md-3 offset-md-3">
                 <div class="form-group" align="center">
-                    <input placeholder="Joke Count " class="button " type="number" max="50" onkeypress="if (this.value.length > 1 ) return false;" id= "txtcount"/>
+                    <input placeholder="Joke Count " class="button " type="number" min="0" value="" max="50" onkeypress="if (this.value.length >1 ) return false;" id= "txtcount"/>
                     <br>
                     <button class="button" type="button" id="btncount">Submit</button>
-                    <br>
-                    <br>
-
                     <button class="button" type="button"  value= Next😁Joke  id= "btn">Click😁Jokes</button>
-                    <br>
-                    <br>
                     <button class="button" type="button" id="clr" onclick="locationreload()">Restart</button>
                 </div>
             </div>
